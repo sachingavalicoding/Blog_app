@@ -1,8 +1,10 @@
 
-
 const App = () => {
+    console.log(import.meta.env.VITE_APPWRITE_URL);
     return (
-        <div className="text-2xl text-green-400">App</div>
+        <div>
+            <h1> Hello </h1>
+        </div>
     )
 }
 
