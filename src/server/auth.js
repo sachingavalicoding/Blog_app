@@ -16,6 +16,7 @@ export class AuthSerivce {
             .setEndpoint(conf.appWriteUrl)
             .setProject(conf.appWriteProjectId)
         this.account = new Account(this.client)
+
     }
 
     // createAccount method get an object and passing value for create and account 
@@ -53,7 +54,7 @@ export class AuthSerivce {
         try {
             return await this.account.get();
         } catch (error) {
-            throw error
+            console.log(" GET USER ERROR  ::  Auth ", error)
         }
 
         // if user not found then return null value 
@@ -77,6 +78,6 @@ export class AuthSerivce {
 }
 
 
-const authSerive = new AuthSerivce();
+const authSerivce = new AuthSerivce();
 
-export default authSerive
+export default authSerivce
